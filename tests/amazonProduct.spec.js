@@ -1,0 +1,14 @@
+import { test } from '@playwright/test';
+import { AmazonPage } from '../pom/amazonPage';
+
+test('test case 1', async ({ page }) => {
+
+    await page.goto('https://automationexercise.com/');
+
+    await AmazonPage.productsButton(page).click();
+    await page.waitForTimeout(3000);
+
+    await AmazonPage.cartButton(page).click();
+    await page.waitForTimeout(3000);
+
+});
