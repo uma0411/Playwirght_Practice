@@ -10,5 +10,7 @@ test('test case 1', async ({ page }) => {
 
     await AmazonPage.cartButton(page).click();
     await page.waitForTimeout(3000);
+    const title=await page.title();
+    console.log("Page title is",title)
 
 });
